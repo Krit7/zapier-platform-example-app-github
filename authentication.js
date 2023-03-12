@@ -1,11 +1,17 @@
-'use strict';
-
 const authentication = {
-  type: 'basic',
-  test: {
-    url: 'https://api.github.com/user'
-  },
-  connectionLabel: '{{bundle.authData.username}}'
-};
+	type: 'custom',
+	// "test" could also be a function
+	test: {
+		url: 'https://926f-103-214-60-164.ngrok.io/zapier',
+	},
+	fields: [
+		{
+			key: 'api_key',
+			type: 'string',
+			required: true,
+			helpText: 'Found on your settings page.',
+		},
+	],
+}
 
-module.exports = authentication;
+module.exports = authentication
